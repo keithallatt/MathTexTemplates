@@ -1,0 +1,69 @@
+\documentclass[12pt]{report}
+
+\usepackage{geometry}
+
+\usepackage{titlesec}
+
+\setcounter{secnumdepth}{4}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\arabic{section}.\arabic{subsection}}
+\renewcommand\thesubsubsection{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+\titleformat{\section}
+{\normalfont\scshape}{\thesection}{1em}{}
+\titleformat{\subsection}
+{\normalfont\scshape\small}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+{\normalfont\scshape\small}{\thesubsubsection}{1em}{}
+
+\linespread{1}
+
+\usepackage{cancel}
+\usepackage{multirow}
+
+\usepackage{amssymb,amsmath}
+\allowdisplaybreaks
+
+\usepackage{xparse}
+
+\usepackage{xtab}
+
+\usepackage [english]{babel}
+\usepackage [autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+
+\title{Title}
+\author{Author}
+\date{Date}
+
+\usepackage{placeins}
+
+\usepackage{tabularx}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+\begin{document}
+	
+	\begin{center}
+		\textbf{Title.} \\[8pt]
+		\small{Author} \\
+	\end{center}
+	
+	
+	\section{Introduction}
+
+	
+	\section{Question}
+
+	
+	\section{Theorems and Lemmas}
+	
+
+	\section{Solution}
+	
+	
+	\section{Conclusion}
+	
+	
+\end{document}
