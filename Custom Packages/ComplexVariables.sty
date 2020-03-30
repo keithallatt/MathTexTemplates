@@ -1,0 +1,24 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{ComplexVariables}[2020/03/30 Complex Variables Shortcuts Package]
+
+\ProcessOptions\relax
+
+% create Laurent series
+
+% basic form, a_n * z ^ 
+\newcommand{\LaurentSeriesBasic}{\LaurentSeries{z}{a}{n}}
+% substitute variable name (to make into centered Laurent series)
+\newcommand{\LaurentSeriesVar}[1]{\LaurentSeries{#1}{a}{n}}
+% substitute the coefficient and index variable
+\newcommand{\LaurentSeriesCoef}[2]{\LaurentSeries{z}{#1}{#2}}
+% both of the above
+\newcommand{\LaurentSeries}[3]{\sum_{#3=-\infty}^{\infty} {#2}_{#3} {#1}^{#3}}
+% create series with index starting at #4
+\newcommand{\LaurentSeriesIndexed}[4]{\sum_{#3=#4}^{\infty} {#2}_{#3} {#1}^{#3}}
+
+
+% residuals
+
+\newcommand{\Residual}[2]{\text{Res}\left( #1; #2 \right)}
+
+\endinput

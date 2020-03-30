@@ -1,0 +1,30 @@
+\documentclass[12pt]{report}
+
+\linespread{1}
+
+\usepackage{amssymb,amsmath}
+\allowdisplaybreaks
+
+\usepackage{ComplexVariables}
+
+
+\begin{document}
+	
+Testing Laurent Series.
+	
+\begin{align*}
+\LaurentSeriesBasic \\
+\LaurentSeriesVar{(z-z_0)} \\
+\LaurentSeriesCoef{b}{k} \\
+\LaurentSeries{(z-z_0)}{b}{k} \\
+\LaurentSeriesIndexed{(z-z_0)}{b}{k}{-m}
+\end{align*} 
+
+Testing Residuals.
+
+\begin{align*}
+	\Residual{\frac{f'}{f}}{z_0}
+\end{align*}
+
+
+\end{document}
