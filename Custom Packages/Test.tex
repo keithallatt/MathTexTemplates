@@ -1,5 +1,7 @@
 \documentclass[12pt]{report}
 
+\usepackage[margin=0.5in]{geometry}
+
 \linespread{1}
 
 \usepackage{amssymb,amsmath}
@@ -9,6 +11,30 @@
 
 
 \begin{document}
+
+ComplexVariables.sty:
+	
+Testing Real and Imaginary commands.
+
+\begin{align*}
+	\Re(3+2i) &= \Im(2+3i) \;\;\text{v.s.}\\
+	\Real(3+2i) &= \Imaginary(2+3i) \\
+\end{align*}
+
+Testing arguments.
+
+\begin{align*}
+	\Arg(3+3i) &= \frac{\pi}{4} \\
+	\arg(z) &= \{\Arg(z) + 2\pi k \mid k \in \mathbb{Z} \}
+\end{align*}	
+	
+Testing ball and punctured ball.
+
+\begin{align*}
+	z \in \Ball{z_0}{R} & \iff \left| z - z_0 \right| < R \\
+	z \in \Ball*{z_0}{R} &\iff 0 < \left| z - z_0 \right| < R 
+\end{align*}
+
 	
 Testing Laurent Series.
 	
@@ -26,5 +52,11 @@ Testing Residuals.
 	\Residual{\frac{f'}{f}}{z_0}
 \end{align*}
 
+Testing Various formulas.
+
+\begin{align*}
+	\text{Cauchy's Formula}:&\;\CauchyFormula \\
+	\text{Cauchy's Extended Formula}:&\;\CauchyFormulaExtended \\
+\end{align*}
 
 \end{document}

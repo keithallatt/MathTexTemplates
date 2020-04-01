@@ -1,7 +1,23 @@
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 \ProvidesPackage{ComplexVariables}[2020/03/30 Complex Variables Shortcuts Package]
 
+\RequirePackage{suffix}
+\RequirePackage{upgreek}
+
 \ProcessOptions\relax
+
+% Real and Imaginary as more than the squigly mess
+\newcommand{\Real}{\text{Re}}
+\newcommand{\Imaginary}{\text{Im}}
+
+% principle argument and argument set
+\newcommand{\Arg}{\text{Arg}}
+\renewcommand{\arg}{\text{arg}}
+
+% Ball of radius R centered at z_0 (R=#2, z_0=#1) , i.e. B(z_0, R) = ball
+\newcommand\Ball[2]{B(#1,#2)}
+\WithSuffix\newcommand\Ball*[2]{B_{*}(#1,#2)}
+
 
 % create Laurent series
 
@@ -19,6 +35,11 @@
 
 % residuals
 
+% Res(f, z)
 \newcommand{\Residual}[2]{\text{Res}\left( #1; #2 \right)}
+
+
+\newcommand{\CauchyFormula}{f(a) = \frac{1}{2\pi i} \int_{\gamma} \frac{f(z)}{z - a} dz }
+\newcommand{\CauchyFormulaExtended}{f^{(l)}(a) = \frac{l!}{2\pi i} \int_{\gamma} \frac{f(z)}{(z - a)^{l+1}} dz }
 
 \endinput
